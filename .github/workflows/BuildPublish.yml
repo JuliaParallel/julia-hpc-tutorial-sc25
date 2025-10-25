@@ -84,7 +84,7 @@ jobs:
         run(`$(quarto()) render index.qmd --to pdf`)
 
     - name: Upload PDF presentation
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: pdf-presentation
         path: |
@@ -92,7 +92,7 @@ jobs:
         retention-days: 30
 
     - name: Upload HTML presentation
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: html-presentation
         path: |
