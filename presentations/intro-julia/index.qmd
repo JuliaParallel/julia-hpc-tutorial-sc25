@@ -224,7 +224,7 @@ Julia comes with a simple macro [`@time`](https://docs.julialang.org/en/v1/base/
 ::: {.callout-note}
 ## Caveat
 
-This may not provide useful information for very quick functions (resolution is of the order of ~millisecond):
+This may not provide useful information for very quick functions (resolution is of the order of ~microsecond):
 
 ```{julia}
 #| echo: true
