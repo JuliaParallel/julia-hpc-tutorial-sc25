@@ -1,11 +1,10 @@
 #!/bin/bash
-#SBATCH -A ntrain7
-#SBATCH -C cpu
-#SBATCH -q regular
 #SBATCH --output=slurm_mpi_multinode.out
 #SBATCH --time=00:05:00
 #SBATCH --nodes=4
 #SBATCH --ntasks=16
+#SBATCH --gpus-per-node=4
+#SBATCH -p t4dws
 
 # Load the latest Julia Module
 ml load julia
