@@ -84,7 +84,7 @@ jobs:
         run(`$(quarto()) render index.qmd --to pdf`)
 
     - name: Upload PDF presentation
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: pdf-presentation
         path: |
@@ -92,7 +92,7 @@ jobs:
         retention-days: 30
 
     - name: Upload HTML presentation
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: html-presentation
         path: |
@@ -103,7 +103,7 @@ jobs:
     - name: Save Julia depot cache on cancel or failure
       id: julia-cache-save
       if: cancelled() || failure()
-      uses: actions/cache/save@v4
+      uses: actions/cache/save@v5
       with:
         path: |
           ${{ steps.julia-cache.outputs.cache-paths }}
